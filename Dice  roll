@@ -1,0 +1,15 @@
+import random 
+from time import sleep
+def diceroll(mi,ma):
+    while True:
+        print("Dice rolling .........wait a moment....")
+        x=random.randint(mi,ma)
+        sleep(4)
+        print(f"Rolled number is: {x}")
+        c=(input("if you want to roll the dice again then enter y otherwise n  (y/n)"))
+        if c.lower()=='n':
+            break
+if __name__=="__main__":
+    mi=1
+    ma=int(input("enter your max range for example 1-6 then enter 6"))
+    diceroll(mi,ma)
